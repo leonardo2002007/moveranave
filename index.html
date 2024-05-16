@@ -18,25 +18,14 @@ Descrição: Nave contra inimigo no espaço.
     <script>
         canvas = document.getElementById("canv");
         ctx = canvas.GetContext("2d");
-        ctx.clearRect(col-50, 700-160, 260, 160);
-        ctx.drawImage(nave, col 700-160);
         nave = new image()
         nave.src = "img/nave.png";
         x = 400 - nave.width/2;
         nave.onload = function() {
             ctx.drawImage(nave, x, 700-160);
         }
-        document.addEventListener("keydown", function(evento {
+        document.addEventListener("keydown", function(evento) {
             movimentaNaveTeclado(evento.keyCode);
-            canvas.onmousemove = function (e) {
-                var col = e.pageX;
-                var lin = e.pageY;
-                MovimentaNaveMouse(col - 80, lin);
-            }
-            canvas.onmousedown = function (e) {
-                var col = e.PageX;
-                disparaTiro(col, 700-160);
-            }
         });
     </script>
 </body>
