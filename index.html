@@ -1,0 +1,43 @@
+<!--
+Programa: index.html Data: 16/05
+Nome:Leonardo Lima da Silva nº: 15 Turma: 3ºJ
+Nome:Guilherme Henrique nº: 06
+Nome:Guilherme Jorge nº: 07
+Nome:Ingride nº: 08
+Nome:Ana Clara nº: 01
+Descrição: Nave contra inimigo no espaço.
+
+-->
+<html>
+    <head>
+        <title>Movimentos com teclado</title>
+        <script src="gamesWeb.js"></script>
+    </head>
+<body>
+    <canvas id="canv" width="800" height="700"></canvas>
+    <script>
+        canvas = document.getElementById("canv");
+        ctx = canvas.GetContext("2d");
+        ctx.clearRect(col-50, 700-160, 260, 160);
+        ctx.drawImage(nave, col 700-160);
+        nave = new image()
+        nave.src = "img/nave.png";
+        x = 400 - nave.width/2;
+        nave.onload = function() {
+            ctx.drawImage(nave, x, 700-160);
+        }
+        document.addEventListener("keydown", function(evento {
+            movimentaNaveTeclado(evento.keyCode);
+            canvas.onmousemove = function (e) {
+                var col = e.pageX;
+                var lin = e.pageY;
+                MovimentaNaveMouse(col - 80, lin);
+            }
+            canvas.onmousedown = function (e) {
+                var col = e.PageX;
+                disparaTiro(col, 700-160);
+            }
+        });
+    </script>
+</body>
+</html>
